@@ -3,6 +3,7 @@ export interface ServiceDetail {
   title: string;
   tagline: string;
   imageNumber: number;
+  imageExtension?: string; // defaults to 'png'
   whyNeeded: {
     title: string;
     content: string[];
@@ -122,6 +123,7 @@ export const serviceDetails: ServiceDetail[] = [
     title: "Google Business Profile Optimization",
     tagline: "Dominate local search results",
     imageNumber: 3,
+    imageExtension: "jpg",
     whyNeeded: {
       title: "Why Google Business Profile Optimization is Essential",
       content: [
@@ -366,6 +368,7 @@ export const serviceDetails: ServiceDetail[] = [
     title: "Website Creation & Maintenance",
     tagline: "Build and maintain high-performance sites",
     imageNumber: 8,
+    imageExtension: "jpg",
     whyNeeded: {
       title: "Why Website Creation & Maintenance is Essential",
       content: [

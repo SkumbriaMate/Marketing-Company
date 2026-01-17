@@ -63,15 +63,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </div>
             <div className="order-1 lg:order-2 flex items-center justify-center lg:justify-end">
               <Image
-                src={`/assets/${service.imageNumber}.png`}
+                src={`/assets/${service.imageNumber}.${service.imageExtension || 'png'}`}
                 alt={service.title}
-                width={service.imageNumber === 8 ? 800 : 600}
-                height={service.imageNumber === 8 ? 800 : 600}
-                className={`object-contain w-full h-auto ${
-                  service.imageNumber === 8 
-                    ? "max-w-[400px] sm:max-w-[550px] lg:max-w-[700px]" 
-                    : "max-w-[300px] sm:max-w-[400px] lg:max-w-[500px]"
-                }`}
+                width={600}
+                height={600}
+                className="object-contain w-full h-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[500px]"
                 priority
               />
             </div>
